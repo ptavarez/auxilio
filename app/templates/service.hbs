@@ -1,0 +1,14 @@
+<h2>{{model.name}}</h2>
+
+<ul>
+  <li>Category: {{model.category}}</li>
+  <li>
+    {{#if model.description}}
+      {{model.description}}
+    {{else}}
+      Coming Soon!
+    {{/if}}
+  </li>
+</ul>
+
+{{#link-to 'services'}}Back{{/link-to}}
