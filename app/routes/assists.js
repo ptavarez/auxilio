@@ -6,6 +6,9 @@ export default Route.extend({
   },
 
   actions: {
-    // add actions within this route here
+    createAssist (assist) {
+      this.get('store').createRecord('assist', assist)
+        .save()
+    }
   }
 })
