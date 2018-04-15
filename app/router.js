@@ -11,7 +11,7 @@ Router.map(function () {
   this.route('sign-in')
   this.route('change-password')
   this.route('users')
-  this.route('services');
+  this.route('services')
 })
 
 export default Router
