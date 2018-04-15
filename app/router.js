@@ -13,6 +13,7 @@ Router.map(function () {
   this.route('users')
   this.route('services')
   this.route('service', { path: '/services/:service_id' })
+  this.route('assists')
 })
 
 export default Router
