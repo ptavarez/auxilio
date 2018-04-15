@@ -1,0 +1,12 @@
+
+{{#if model.service}}
+  <h4>{{model.service}}</h4>
+{{else}}
+  <h4>Some Service</h4>
+{{/if}}
+<ul>
+  <li>Requested On {{model.created_at}}</li>
+  <li>Fullfilled: {{model.fulfilled}}</li>
+</ul>
+
+{{#link-to 'assists'}}Back{{/link-to}}
