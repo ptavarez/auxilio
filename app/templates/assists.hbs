@@ -1,7 +1,17 @@
 <h2>Assists</h2>
 
 {{#each model as |assist|}}
-  <ul>
-    <li>{{assist.service}}</li>
-  </ul>
+  {{#if assist.editable}}
+    <ul>
+      <li>
+        {{#link-to 'assist' assist}}
+          {{#if assist.service}}
+            {{assist.service}}
+          {{else}}
+            Some Service
+          {{/if}}
+        {{/link-to}}
+      </li>
+    </ul>
+  {{/if}}
 {{/each}}
