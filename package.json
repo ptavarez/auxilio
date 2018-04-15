@@ -1,7 +1,7 @@
 {
   "name": "auxilio",
   "version": "0.0.0",
-  "description": "ember auth template",
+  "description": "Auxilio Client",
   "private": true,
   "directories": {
     "doc": "doc",
