@@ -2,6 +2,10 @@
 
 {{#each model as |service|}}
   <ul>
-    <li>{{#link-to 'service' service}}{{service.name}}{{/link-to}}</li>
+    <li>
+      {{#link-to 'service' service}}
+        {{service.name}}
+      {{/link-to}}
+    </li>
   </ul>
 {{/each}}
