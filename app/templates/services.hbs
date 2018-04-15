@@ -1,1 +1,7 @@
-{{outlet}}
+<h2>Services</h2>
+
+{{#each model as |service|}}
+  <ul>
+    <li>{{service.name}}</li>
+  </ul>
+{{/each}}
