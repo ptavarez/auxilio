@@ -4,9 +4,10 @@
 
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
+        <li>{{#link-to "services"}}SERVICES{{/link-to}}</li>
         {{#if isAuthenticated}}
-        <li>{{#link-to "services"}}Services{{/link-to}}</li>
-        <li>{{#link-to "users"}}Users{{/link-to}}</li>
+        <li>{{#link-to "assists"}}AUXES{{/link-to}}</li>
+        <li>{{#link-to "users"}}USERS{{/link-to}}</li>
         {{/if}}
       </ul>
       <ul class="nav navbar-nav navbar-right">
