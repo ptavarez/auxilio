@@ -1,6 +1,6 @@
 <h2>Auxes</h2>
 
-<p>{{create-assist create='createAssist'}}</p>
+{{!-- <p>{{create-assist create='createAssist'}}</p> --}}
 
 {{#each model as |assist|}}
   {{#if assist.editable}}
@@ -8,7 +8,7 @@
       <li>
         {{#link-to 'assist' assist}}
           {{#if assist.service}}
-            {{assist.service}}
+            {{assist.service.name}}
           {{else}}
             Some Service
           {{/if}}
