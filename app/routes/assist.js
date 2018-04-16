@@ -10,7 +10,6 @@ export default Route.extend({
   actions: {
     updateAssist (assist) {
       assist.save()
-        .then(() => this.transitionTo('assists'))
         .then(() => {
           this.get('toast').success('Aux Updated!')
         })
