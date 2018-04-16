@@ -7,8 +7,8 @@ export default Component.extend({
 
   actions: {
     updateAssist () {
+      this.toggleProperty('assist.fulfilled')
       this.sendAction('update', this.get('assist'))
-      this.set('assist', {})
     }
   }
 })
