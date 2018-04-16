@@ -8,6 +8,12 @@ export default Route.extend({
     updateAssist (assist) {
       console.log('updateAssist')
       assist.save()
+        .then(() => this.transitionTo('assists'))
+    },
+    deleteAssist (assist) {
+      console.log('Delete', assist)
+      assist.destroyRecord()
+        .then(() => this.transitionTo('assists'))
     }
   }
 })
