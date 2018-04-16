@@ -1,13 +1,11 @@
 import Component from '@ember/component'
 
 export default Component.extend({
-  assist: {
-    service: 'Test Service'
-  },
 
   actions: {
-    requestAssist () {
-      this.sendAction('request', this.get('assist'))
+    requestAssist (service) {
+      console.log('Service is', service.id)
+      this.sendAction('request', { service_id: service.id })
     }
   }
 })
