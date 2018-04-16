@@ -3,7 +3,7 @@ import { inject as service } from '@ember/service'
 
 export default Route.extend({
   auth: service(),
-  flashMessages: service(),
+  toast: service(),
 
   actions: {
     signOut () {
@@ -11,11 +11,11 @@ export default Route.extend({
         .then(() => this.get('store').unloadAll())
         .then(() => this.transitionTo('sign-in'))
         .then(() => {
-          this.get('flashMessages').warning('You have been signed out.')
+          this.get('toast').warning('You have been signed out.')
         })
         .catch(() => {
-          this.get('flashMessages')
-          .danger('There was a problem. Are you sure you\'re signed-in?')
+          this.get('toast')
+          .error('There was a problem. Are you sure you\'re signed-in?')
         })
     },
 
@@ -27,12 +27,12 @@ export default Route.extend({
       )
 
       if (unauthorized) {
-        this.get('flashMessages')
-          .danger('You must be authenticated to access this page.')
+        this.get('toast')
+          .error('You must be authenticated to access this page.')
         this.transitionTo('/sign-in')
       } else {
-        this.get('flashMessages')
-          .danger('There was a problem. Please try again.')
+        this.get('toast')
+          .error('There was a problem. Please try again.')
       }
 
       return false

@@ -4,7 +4,7 @@ import RSVP from 'rsvp'
 
 export default Route.extend({
   auth: service(),
-  flashMessages: service(),
+  toast: service(),
 
   model () {
     return RSVP.Promise.resolve({})
@@ -14,10 +14,10 @@ export default Route.extend({
     signIn (credentials) {
       return this.get('auth').signIn(credentials)
         .then(() => this.transitionTo('application'))
-        .then(() => this.get('flashMessages').success('Thanks for signing in!'))
+        .then(() => this.get('toast').success('Thanks for signing in!'))
         .catch(() => {
-          this.get('flashMessages')
-          .danger('There was a problem. Please try again.')
+          this.get('toast')
+          .error('There was a problem. Please try again.')
         })
     }
   }
