@@ -8,7 +8,7 @@ export default Component.extend({
   actions: {
     updateAssist () {
       this.sendAction('update', this.get('assist'))
-      // this.set('assist', {})
+      this.set('assist', {})
     }
   }
 })
