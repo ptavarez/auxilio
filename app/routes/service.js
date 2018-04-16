@@ -5,6 +5,9 @@ export default Route.extend({
     return this.get('store').findRecord('service', params.service_id)
   },
   actions: {
-    // add actions within this route here
+    requestAssist (assist) {
+      this.get('store').createRecord('assist', assist)
+        .save()
+    }
   }
 })
