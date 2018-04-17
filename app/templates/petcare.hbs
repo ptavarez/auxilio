@@ -1,0 +1,15 @@
+<h2>PET CARE</h2>
+
+{{#each model as |service|}}
+  <div class="col-lg-3 col-md-4 col-sm-6 text-center services">
+        <h3>
+          {{#link-to 'service' service}}
+            {{service.name}}
+          {{/link-to}}
+        </h3>
+        <h4>
+          {{service.category}}
+        </h4>
+        {{request-service request='requestAssist' service=service}}
+  </div>
+{{/each}}
