@@ -23,6 +23,7 @@ Router.map(function () {
   this.route('cosmetics', { path: '/services/cosmetics' })
   this.route('geek', { path: '/services/geek' })
   this.route('lawncare', { path: '/services/lawncare' })
+  this.route('petcare', { path: '/services/petcare' })
 })
 
 export default Router
