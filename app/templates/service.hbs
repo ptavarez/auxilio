@@ -1,14 +1,22 @@
-<h2>{{model.name}}</h2>
+<div class="col-lg-3 col-md-4 col-sm-6">
+  <h2>{{model.category}}</h2>
+</div>
 
-<ul>
-  <li>Category: {{model.category}}</li>
-  <li>
-    {{#if model.description}}
-      {{model.description}}
-    {{else}}
-      Coming Soon!
-    {{/if}}
-  </li>
-</ul>
-
-{{request-service request='requestAssist' service=model}}
+<div class="col-lg-9 col-md-8 col-sm-6 carousel">
+  <div>
+    <img class="img-fluid" src="http://placehold.it/800x400" alt="">
+    <div>
+      <h3>
+        {{model.name}}
+      </h3>
+      <p>
+        {{#if model.description}}
+          {{model.description}}
+        {{else}}
+          Coming Soon!
+        {{/if}}
+      </p>
+      {{request-service request='requestAssist' service=model}}
+    </div>
+  </div>
+</div>
