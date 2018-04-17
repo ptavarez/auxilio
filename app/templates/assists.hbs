@@ -1,19 +1,20 @@
-<h2>Auxes</h2>
+<h2>AUXES</h2>
 
-<p>{{create-assist create='createAssist'}}</p>
+<div class="text-center">
+  {{#each model as |assist|}}
+    {{#if assist.editable}}
+      <div class="col-lg-3 col-md-4 col-sm-6 text-center assists">
 
-{{#each model as |assist|}}
-  {{#if assist.editable}}
-    <ul>
-      <li>
-        {{#link-to 'assist' assist}}
-          {{#if assist.service}}
-            {{assist.service}}
-          {{else}}
-            Some Service
-          {{/if}}
-        {{/link-to}}
-      </li>
-    </ul>
-  {{/if}}
-{{/each}}
+          {{#link-to 'assist' assist}}
+            {{#if assist.service}}
+              <h3>
+                {{assist.service.name}}
+              </h3>
+            {{else}}
+              Some Service
+            {{/if}}
+          {{/link-to}}
+      </div>
+    {{/if}}
+  {{/each}}
+</div>

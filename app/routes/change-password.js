@@ -4,7 +4,7 @@ import RSVP from 'rsvp'
 
 export default Route.extend({
   auth: service(),
-  flashMessages: service(),
+  toast: service(),
 
   model () {
     return RSVP.Promise.resolve({})
@@ -17,19 +17,19 @@ export default Route.extend({
         .then(() => this.get('auth').signOut())
         .then(() => this.transitionTo('sign-in'))
         .then(() => {
-          this.get('flashMessages')
+          this.get('toast')
           .success('Successfully changed your password!')
         })
         .then(() => {
-          this.get('flashMessages').warning('You have been signed out.')
+          this.get('toast').warning('You have been signed out.')
         })
         .catch(() => {
-          this.get('flashMessages')
-          .danger('There was a problem. Please try again.')
+          this.get('toast')
+          .error('There was a problem. Please try again.')
         })
       } else {
-        this.get('flashMessages')
-        .danger('Your new passwords must match.')
+        this.get('toast')
+        .error('Your new passwords must match.')
       }
     }
   }

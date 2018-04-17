@@ -2,7 +2,7 @@ import Route from '@ember/routing/route'
 import { inject as service } from '@ember/service'
 
 export default Route.extend({
-  notification: service('toast'),
+  toast: service(),
 
   model () {
     return this.get('store').findAll('assist')
@@ -13,11 +13,11 @@ export default Route.extend({
       this.get('store').createRecord('assist', assist)
         .save()
         .then(() => {
-          this.get('notification').success('Aux Submitted!')
+          this.get('toast').success('Aux Submitted!')
         })
         .catch(() => {
-          this.get('notification')
-            .danger('There was a problem. Please try again.')
+          this.get('toast')
+            .error('There was a problem. Please try again.')
         })
     }
   }

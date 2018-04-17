@@ -1,0 +1,18 @@
+$aqua: #7fdbff;
+$black: #111;
+$blue: #0074d9;
+$charcoal: #4e4e4e;
+$gray: #aaa;
+$navy: #001f3f;
+$red: #ff4136;
+$silver: #ddd;
+$white: #fff;
+$redd: #ff0077;
+
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
