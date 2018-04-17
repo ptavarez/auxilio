@@ -1,16 +1,41 @@
+<div class="col-lg-3 col-md-4 col-sm-6">
+  <h2>{{model.service.category}}</h2>
+  <p>{{#link-to 'assists'}}Back{{/link-to}}</p>
+</div>
 
-{{#if model.service}}
-  <h4>{{model.service.name}}</h4>
-{{else}}
-  <h4>Service</h4>
-{{/if}}
-<ul>
-  <li>Requested On {{model.created_at}}</li>
-  <li>Fullfilled: {{model.fulfilled}}</li>
-</ul>
-
-<p>{{update-assist update='updateAssist' assist=model}}</p>
-
-<p><button {{action 'deleteAssist' model}}>Delete Assist</button></p>
-
-<p>{{#link-to 'assists'}}Back{{/link-to}}</p>
+<div class="col-lg-9 col-md-8 col-sm-6 carousel">
+  <div>
+    <img class="img-fluid" src="http://placehold.it/800x400" alt="">
+    <div>
+      <h3>
+        {{model.service.name}}
+      </h3>
+      <p>
+        {{#if model.service.description}}
+          {{model.service.description}}
+        {{else}}
+          Coming Soon!
+        {{/if}}
+      </p>
+      <p>
+        Requested On {{model.created_at}}
+      </p>
+      <p>
+        Status:
+        {{#if model.fulfilled}}
+          Completed!
+        {{else}}
+          An Auxer Is On Their Way!
+        {{/if}}
+      </p>
+      <p>
+        {{update-assist update='updateAssist' assist=model}}
+      </p>
+      <p>
+        <button {{action 'deleteAssist' model}} class="btn btn-danger">
+          Delete Assist
+        </button>
+      </p>
+    </div>
+  </div>
+</div>
