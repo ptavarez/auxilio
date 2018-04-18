@@ -12,18 +12,29 @@
           <ul class="dropdown-menu">
             <li>{{#link-to "services"}}ALL{{/link-to}}</li>
             <li role="separator" class="divider"></li>
-            <li>{{#link-to "automotive"}}Automotive{{/link-to}}</li>
-            <li>{{#link-to "cosmetics"}}Cosmetics{{/link-to}}</li>
-            <li>{{#link-to "delivery"}}Delivery{{/link-to}}</li>
-            <li>{{#link-to "geek"}}Geek{{/link-to}}</li>
-            <li>{{#link-to "handiwork"}}Handiwork{{/link-to}}</li>
-            <li>{{#link-to "housekeeping"}}Housekeeping{{/link-to}}</li>
-            <li>{{#link-to "lawncare"}}Lawncare{{/link-to}}</li>
-            <li>{{#link-to "petcare"}}Pet Care{{/link-to}}</li>
+            <li>{{#link-to "automotive"}}AUTOMOTIVE{{/link-to}}</li>
+            <li>{{#link-to "cosmetics"}}COSMETICS{{/link-to}}</li>
+            <li>{{#link-to "delivery"}}DELIVERY{{/link-to}}</li>
+            <li>{{#link-to "geek"}}GEEK{{/link-to}}</li>
+            <li>{{#link-to "handiwork"}}HANDIWORK{{/link-to}}</li>
+            <li>{{#link-to "housekeeping"}}HOUSEKEEPING{{/link-to}}</li>
+            <li>{{#link-to "lawncare"}}LAWNCARE{{/link-to}}</li>
+            <li>{{#link-to "petcare"}}PET CARE{{/link-to}}</li>
           </ul>
         </li>
         {{#if isAuthenticated}}
-        <li>{{#link-to "assists"}}AUXES{{/link-to}}</li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            AUXES
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>{{#link-to "assists"}}ALL{{/link-to}}</li>
+            <li role="separator" class="divider"></li>
+            <li>{{#link-to "pending-assists"}}PENDING{{/link-to}}</li>
+            <li>{{#link-to "completed-assists"}}COMPLETED{{/link-to}}</li>
+          </ul>
+        </li>
         <li>{{#link-to "users"}}USERS{{/link-to}}</li>
         {{/if}}
       </ul>
