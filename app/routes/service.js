@@ -18,6 +18,9 @@ export default Route.extend({
           this.get('toast')
           .error('There was a problem. Please try again later.')
         })
+    },
+    processStripeToken () {
+      console.log('Stripe Payment')
     }
   }
 })
