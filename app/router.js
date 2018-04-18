@@ -25,6 +25,7 @@ Router.map(function () {
   this.route('lawncare', { path: '/services/lawncare' })
   this.route('petcare', { path: '/services/petcare' })
   this.route('completed-assists', { path: '/auxes/completed' })
+  this.route('pending-assists', { path: '/auxes/pending' })
 })
 
 export default Router
