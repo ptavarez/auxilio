@@ -3,10 +3,12 @@ import { inject as service } from '@ember/service'
 
 export default Route.extend({
   toast: service(),
+  stripe: service(),
 
   model (params) {
     return this.get('store').findRecord('service', params.service_id)
   },
+
   actions: {
     requestAssist (assist) {
       this.get('store').createRecord('assist', assist)
@@ -19,8 +21,8 @@ export default Route.extend({
           .error('There was a problem. Please try again later.')
         })
     },
-    processStripeToken () {
-      console.log('Stripe Payment')
+    processStripeToken (data) {
+      this.get('stripe').charge(data)
     }
   }
 })
