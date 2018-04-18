@@ -17,6 +17,12 @@
           Coming Soon!
         {{/if}}
       </p>
+      {{stripe-checkout
+        name="AUXILIO"
+        description=model.name
+        amount=2000
+        action="processStripeToken"
+      }}
       {{request-service request='requestAssist' service=model}}
     </div>
   </div>
