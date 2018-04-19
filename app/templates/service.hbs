@@ -3,7 +3,7 @@
   <p>{{#link-to 'services'}}All Services{{/link-to}}</p>
 </div>
 
-<div class="col-lg-9 col-md-8 col-sm-6 carousel">
+<div class="col-lg-9 col-md-8 col-sm-6">
   <div>
     <img class="img-fluid" src="http://placehold.it/800x400" alt="">
     <div>
@@ -17,12 +17,6 @@
           Coming Soon!
         {{/if}}
       </p>
-      {{stripe-checkout
-        name="AUXILIO"
-        description=model.name
-        amount=2000
-        action="processStripeToken"
-      }}
       {{request-service request='requestAssist' service=model}}
     </div>
   </div>
