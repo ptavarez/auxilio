@@ -16,3 +16,18 @@
     max-width: 100%;
   }
 }
+
+.services {
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 120%;
+  border: 2px solid white;
+  padding: 10vh 1vw 2vh 1vw;
+  height: 40vh;
+  min-height: 300px;
+  &:hover {
+    background-size: 200%;
+  }
+}

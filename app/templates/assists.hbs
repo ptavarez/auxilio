@@ -2,7 +2,10 @@
 
   {{#if model}}
     {{#each model as |assist|}}
-        <div class="col-lg-3 col-md-4 col-sm-6 text-center assists">
+    <div class="col-lg-3 col-md-4 col-sm-6 text-center assists"
+    style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .8)),
+    url({{assist.service.image}}); background-position: center; background-repeat: no-repeat;
+    background-size: cover;">
             {{#link-to 'assist' assist}}
               {{#if assist.service}}
                 <h3>
