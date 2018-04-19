@@ -1,0 +1,29 @@
+<h2>PENDING AUXES</h2>
+
+{{#if model}}
+  <div class="text-center">
+    {{#each model as |assist|}}
+      {{#if assist.editable}}
+      <div class="col-lg-3 col-md-4 col-sm-6 text-center assists"
+      style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .8)),
+      url({{assist.service.image}}); background-position: center; background-repeat: no-repeat;
+      background-size: cover;">
+
+            {{#link-to 'assist' assist}}
+              {{#if assist.service}}
+                <h3>
+                  {{assist.service.name}}
+                </h3>
+              {{else}}
+                Some Service
+              {{/if}}
+            {{/link-to}}
+        </div>
+      {{/if}}
+    {{/each}}
+  </div>
+{{else}}
+  <p>
+    An Aux is what we call assists, or help. All pending requested services will appear here!
+  </p>
+{{/if}}

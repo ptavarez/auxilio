@@ -31,6 +31,10 @@ module.exports = function (environment) {
     // ENV.APP.LOG_TRANSITIONS = true
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true
     // ENV.APP.LOG_VIEW_LOOKUPS = true
+    ENV.stripe = {
+      key: 'pk_test_iaI0Py8YMGsUWeYcW7UKXhHr'
+    }
+
     const port = +('GA'.split('').reduce((p, c) =>
       p + c.charCodeAt().toString(16), '')
     )
@@ -53,6 +57,9 @@ module.exports = function (environment) {
     ENV.rootURL = '/auxilio'
     ENV.locationType = 'hash'
     ENV.apiHost = 'https://auxilio.herokuapp.com/'
+    ENV.stripe = {
+      key: 'pk_test_iaI0Py8YMGsUWeYcW7UKXhHr'
+    }
   }
 
   return ENV

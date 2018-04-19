@@ -13,7 +13,7 @@ export default Route.extend({
       this.get('store').createRecord('assist', assist)
         .save()
         .then(() => this.get('toast').success('Aux Requested'))
-        .then(() => this.transitionTo('assists'))
+        .then(() => this.transitionTo('pending-assists'))
         .catch(() => {
           this.transitionTo('sign-in')
           this.get('toast')

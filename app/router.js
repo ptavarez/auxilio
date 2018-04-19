@@ -13,8 +13,8 @@ Router.map(function () {
   this.route('users')
   this.route('services', function () {})
   this.route('service', { path: '/services/:service_id' })
-  this.route('assists')
-  this.route('assist', { path: '/assists/:assist_id' })
+  this.route('assists', { path: '/auxes' })
+  this.route('assist', { path: '/auxes/:assist_id' })
   this.route('landing', { path: '/' })
   this.route('delivery', { path: '/services/delivery' })
   this.route('automotive', { path: '/services/automotive' })
@@ -24,6 +24,9 @@ Router.map(function () {
   this.route('geek', { path: '/services/geek' })
   this.route('lawncare', { path: '/services/lawncare' })
   this.route('petcare', { path: '/services/petcare' })
+  this.route('completed-assists', { path: '/auxes/completed' })
+  this.route('pending-assists', { path: '/auxes/pending' })
+  this.route('about')
 })
 
 export default Router

@@ -1,7 +1,10 @@
 <h2>HANDIWORK</h2>
 
 {{#each model as |service|}}
-  <div class="col-lg-3 col-md-4 col-sm-6 text-center services">
+<div class="col-lg-3 col-md-4 col-sm-6 text-center services"
+style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .8)),
+url({{service.image}}); background-position: center; background-repeat: no-repeat;
+background-size: cover;">
         <h3>
           {{#link-to 'service' service}}
             {{service.name}}

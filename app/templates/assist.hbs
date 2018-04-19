@@ -1,11 +1,12 @@
 <div class="col-lg-3 col-md-4 col-sm-6">
   <h2>{{model.service.category}}</h2>
-  <p>{{#link-to 'assists'}}Back{{/link-to}}</p>
+  <p>{{#link-to 'pending-assists'}}Pending Auxes{{/link-to}}</p>
+  <p>{{#link-to 'completed-assists'}}Completed Auxes{{/link-to}}</p>
 </div>
 
-<div class="col-lg-9 col-md-8 col-sm-6 carousel">
+<div class="col-lg-9 col-md-8 col-sm-6 assist">
   <div>
-    <img class="img-fluid" src="http://placehold.it/800x400" alt="">
+    <img class="img-fluid" src={{model.service.image}} alt="">
     <div>
       <h3>
         {{model.service.name}}
