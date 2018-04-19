@@ -1,21 +1,26 @@
 <h2>PENDING AUXES</h2>
-<p>All of your pending requests appear here.</p>
 
-<div class="text-center">
-  {{#each model as |assist|}}
-    {{#if assist.editable}}
-      <div class="col-lg-3 col-md-4 col-sm-6 text-center assists">
+{{#if model}}
+  <div class="text-center">
+    {{#each model as |assist|}}
+      {{#if assist.editable}}
+        <div class="col-lg-3 col-md-4 col-sm-6 text-center assists">
 
-          {{#link-to 'assist' assist}}
-            {{#if assist.service}}
-              <h3>
-                {{assist.service.name}}
-              </h3>
-            {{else}}
-              Some Service
-            {{/if}}
-          {{/link-to}}
-      </div>
-    {{/if}}
-  {{/each}}
-</div>
+            {{#link-to 'assist' assist}}
+              {{#if assist.service}}
+                <h3>
+                  {{assist.service.name}}
+                </h3>
+              {{else}}
+                Some Service
+              {{/if}}
+            {{/link-to}}
+        </div>
+      {{/if}}
+    {{/each}}
+  </div>
+{{else}}
+  <p>
+    An Aux is what we call assists, or help. All pending requested services will appear here!
+  </p>
+{{/if}}

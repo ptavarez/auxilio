@@ -1,9 +1,8 @@
 <h2>AUXES</h2>
-<p>All of your requested services appear here.</p>
 
 <div class="text-center">
+  {{#if model}}
   {{#each model as |assist|}}
-    {{#if assist.editable}}
       <div class="col-lg-3 col-md-4 col-sm-6 text-center assists">
           {{#link-to 'assist' assist}}
             {{#if assist.service}}
@@ -15,7 +14,10 @@
             {{/if}}
           {{/link-to}}
       </div>
-      {{else}}
-    {{/if}}
   {{/each}}
+  {{else}}
+  <p>
+    An Aux is what we call assists, or help. All requested services will appear here!
+  </p>
+  {{/if}}
 </div>
