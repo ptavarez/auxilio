@@ -1,0 +1,85 @@
+<h2>ABOUT</h2>
+
+<div>
+  <h3>Intro</h3>
+  <p>
+    Auxillio, Latin for help or assist, is an application that connects
+    customers to independent contractors and/or service providers. Businesses
+    will have the option to receive help from independent contractors or use
+    their own personnel to fulfill any form of on-demand service a customer,
+    who will be referred to as a Client, needs.
+  </p>
+  <p>
+    A team of independent contractors, known as auxers, will fulfill any
+    assist, or aux, a Client needs on run-time. Auxers will assist in many
+    different areas. From picking up some headphones at a department store,
+    to helping a Client jumpstart their car, an auxer will be there to assist.
+  </p>
+  <p>
+    The goal is to enable customers to receive on-demand service in a timely
+    fashion. Users will have fast and easy access to have their requests and
+    orders fulfilled by auxers and partners working coherently.
+  </p>
+</div>
+
+<div>
+  <h3>The App</h3>
+  <p>
+    The Auxillio app will require three different versions: Client version,
+    Auxer version, and Manager version. Although they have different needs,
+    all three versions will work together to provide a unique experience for
+    all three parties.
+  </p>
+    <ul>
+      <li>
+        Clients will have fast and easy access to their nearest auxer and/or
+        partner with the ability to request an aux through the app.
+      </li>
+      <li>
+        Auxers and partner drivers will have access to available auxes and
+        statistics.
+      </li>
+      <li>
+        Managers are basically dispatchers. They're the ones that will ensure
+        everything is running smoothly and Clients are receiving their auxes in
+        a timely fashion.
+      </li>
+    </ul>
+  <h4>Current Version</h4>
+  <h5>Client</h5>
+  <p>
+    Welcome to the Client version. Currently, a user is able to view all
+    available services. Once they find a service they need, they are able to
+    request an Aux and determine the status of it. For testing purposes, no
+    payment is required.
+  </p>
+  <h4>Next Steps</h4>
+  <h5>Auxer</h5>
+  <p>
+    The next version to be implemented will be Auxer. This version will allow an
+    Auxer to log in and start receiving assists to fulfill. They will also be
+    able to negotiate a price with the Client to have complete control of their
+    money.
+  </p>
+  <h5>Manager</h5>
+  <p>
+    A team needs to oversee all requests and make sure Clients and Auxers are
+    happy. This is where the manager version comes in. This will be the final
+    version before lift off.
+  </p>
+</div>
+<div>
+  <h3>Donations</h3>
+  <p>
+    If you believe in this idea and want to become a part of this journey, help
+    us out! Auxilio is currently accepting donations. If you would wish to make
+    a donation, pay with your card below. Payments are powered by Stripe, so
+    your information is safe!
+  </p>
+  {{stripe-checkout
+    name="AUXILIO"
+    description=model.name
+    amount=2000
+    action="processStripeToken"
+  }}
+</div>
