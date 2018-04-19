@@ -21,8 +21,8 @@ export default Route.extend({
           .error('There was a problem. Please try again later.')
         })
     },
-    processStripeToken (data) {
-      this.get('stripe').charge(data)
+    processStripeToken ({card, email, id}) {
+      this.get('stripe').charge(card, email, id)
     }
   }
 })
