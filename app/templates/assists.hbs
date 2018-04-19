@@ -1,10 +1,10 @@
 <h2>AUXES</h2>
+<p>All of you requested services appear here.</p>
 
 <div class="text-center">
   {{#each model as |assist|}}
     {{#if assist.editable}}
       <div class="col-lg-3 col-md-4 col-sm-6 text-center assists">
-
           {{#link-to 'assist' assist}}
             {{#if assist.service}}
               <h3>
@@ -15,6 +15,7 @@
             {{/if}}
           {{/link-to}}
       </div>
+      {{else}}
     {{/if}}
   {{/each}}
 </div>
