@@ -20,9 +20,6 @@ export default Route.extend({
           this.get('toast')
           .error('There was a problem. Please try again later.')
         })
-    },
-    processStripeToken ({card, email, id}) {
-      this.get('stripe').charge(card, email, id)
     }
   }
 })
