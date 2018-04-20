@@ -3,6 +3,10 @@
 ### An On Demand Service Provider
 Auxilio is a web application that provides on demand services to those who need some form of assistance. Users have to submit a request, or aux, through this web application to have a service fulfilled.
 
+## Screenshot
+
+![Auxilio](https://i.imgur.com/TcXH7Hkl.png)
+
 ## Links
 
 ### Client URL
