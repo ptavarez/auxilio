@@ -13,6 +13,7 @@ export default Route.extend({
         .then(() => {
           this.get('toast').success('Aux Updated!')
         })
+        .then(() => this.transitionTo('completed-assists'))
         .catch(() => {
           this.get('toast')
             .error('There was a problem. Please try again.')
