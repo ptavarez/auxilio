@@ -1,6 +1,7 @@
 <h2>ABOUT</h2>
 
-<div>
+<div class="col-lg-9 col-md-9 col-sm-9">
+  <div>
   <h3>Intro</h3>
   <p>
     Auxillio, Latin for help or assist, is an application that connects
@@ -21,8 +22,25 @@
     orders fulfilled by auxers and partners working coherently.
   </p>
 </div>
+</div>
 
-<div>
+<div class="col-lg-3 col-md-3 col-sm-3">
+  <h3>Donations</h3>
+  <p>
+    If you believe in this idea and want to become a part of this journey, help
+    us out! Auxilio is currently accepting donations. If you would wish to make
+    a donation, pay with your card below. Payments are powered by Stripe, so
+    your information is safe!
+  </p>
+  {{stripe-checkout
+    name="AUXILIO"
+    description=model.name
+    amount=2000
+    action="processStripeToken"
+  }}
+</div>
+
+<div class="col-lg-12 col-md-12 col-sm-12">
   <h3>The App</h3>
   <p>
     The Auxillio app will require three different versions: Client version,
@@ -67,19 +85,4 @@
     happy. This is where the manager version comes in. This will be the final
     version before lift off.
   </p>
-</div>
-<div>
-  <h3>Donations</h3>
-  <p>
-    If you believe in this idea and want to become a part of this journey, help
-    us out! Auxilio is currently accepting donations. If you would wish to make
-    a donation, pay with your card below. Payments are powered by Stripe, so
-    your information is safe!
-  </p>
-  {{stripe-checkout
-    name="AUXILIO"
-    description=model.name
-    amount=2000
-    action="processStripeToken"
-  }}
 </div>

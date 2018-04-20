@@ -1,0 +1,30 @@
+body {
+  font-family:  "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+
+.services a,
+.assists a,
+.landing-cat a {
+  color: $white;
+  &:hover {
+    color: $gray;
+    text-decoration: none;
+  }
+}
+
+.services h4 {
+  color: $gray;
+}
+
+.serv a,
+.aux a {
+  color: $gray;
+  &:hover {
+    color: $black;
+    text-decoration: none;
+  }
+}
+
+.title {
+  font-family: 'Audiowide', cursive;
+}
