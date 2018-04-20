@@ -20,14 +20,11 @@ I followed a pretty good schedule. Staying organzided, I was able to meet MVP in
 
 Ohh Ember... I love and hate you. After smashing into a couple of walls, I was able to successfully build my first application using a front-end framework.
 
-
-
-
 ## Wire Frame
 [Auxilio Wire Frame](http://res.cloudinary.com/ptavarez/image/upload/v1523635924/auxilio-wireframe.jpg)
 
 ## User Stories
-Auxilio is a company that provides on demand services to those who need some form of assistance. This version allows users to submit a request, or an aux*, to the API. Currently they have to determine themselves if the order has been fulfilled or not.
+Auxilio is a web application that provides on demand services to those who need some form of assistance. This version allows users to submit a request, or an aux*, to the API. Currently they have to determine themselves if the order has been fulfilled or not.
 
 ### Authentication
 - As a user, I can:
