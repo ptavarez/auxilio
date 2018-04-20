@@ -17,6 +17,8 @@ Auxilio is a web application that provides on demand services to those who need 
 
 [Github Repo](https://github.com/ptavarez16/auxilio-api/)
 
+[Stripe Charges](https://stripe.com/docs/quickstart)
+
 ## Development Process
 It's been three months since I first started this journey, and I must say, I have no regrets. The skills I learned here have helped me grow into a full stack web developer.
 
