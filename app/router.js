@@ -27,6 +27,7 @@ Router.map(function () {
   this.route('completed-assists', { path: '/auxes/completed' })
   this.route('pending-assists', { path: '/auxes/pending' })
   this.route('about')
+  this.route('search', {path: '/contacts/#/:searchQuery'})
 })
 
 export default Router
