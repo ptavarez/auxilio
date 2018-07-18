@@ -1,0 +1,20 @@
+<h3>Search Results</h3>
+
+{{#if model}}
+  {{#each model as |service|}}
+    <div class="col-lg-3 col-md-4 col-sm-6 text-center services"
+    style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .8)),
+    url({{service.image}}); background-position: center; background-repeat: no-repeat;
+    background-size: cover;">
+          <h3>
+            {{#link-to 'service' service}}
+              {{service.name}}
+            {{/link-to}}
+          </h3>
+          <h4>
+            {{service.category}}
+          </h4>
+          {{request-service request='requestAssist' service=service}}
+    </div>
+  {{/each}}
+{{/if}}

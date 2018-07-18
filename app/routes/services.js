@@ -8,6 +8,10 @@ export default Route.extend({
     return this.get('store').findAll('service', 'assist')
   },
 
+  didInsertElement () {
+    this.set('searchQuery', '')
+  },
+
   actions: {
     requestAssist (assist) {
       this.get('store').createRecord('assist', assist)
@@ -19,6 +23,10 @@ export default Route.extend({
           this.get('toast')
           .error('Please Sign In.')
         })
+    },
+    search (searchQuery) {
+      console.log(searchQuery)
+      this.transitionTo('search', searchQuery)
     }
   }
 })
